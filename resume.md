@@ -1,6 +1,4 @@
 ---
 layout: static
-title: projects
+title: resume
 ---
-TODO
-
