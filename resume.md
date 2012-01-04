@@ -1,4 +1,0 @@
----
-layout: static
-title: resume
----
