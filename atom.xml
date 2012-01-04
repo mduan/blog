@@ -3,15 +3,15 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
- <title>Litany Against Fear</title>
- <link href="http://litanyagainstfear.com/atom.xml" rel="self"/>
- <link href="http://litanyagainstfear.com/"/>
+
+ <title>MD</title>
+ <link href="http://mduan.com/atom.xml" rel="self"/>
+ <link href="http://mduan.com/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://litanyagainstfear.com/</id>
+ <id>http://mduan.com/</id>
  <author>
-   <name>Nick Quaranto</name>
-   <email>nick@quaran.to</email>
+   <name>Mack Duan</name>
+   <email>duan.mack@gmail.com</email>
  </author>
 
  {% for post in site.posts %}
@@ -19,7 +19,7 @@ layout: nil
    <title>{{ post.title | xml_escape }}</title>
    <link href="http://litanyagainstfear.com{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://litanyagainstfear.com{{ post.id }}</id>
+   <id>http://mduan.com{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
