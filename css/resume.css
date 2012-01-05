@@ -1,0 +1,145 @@
+h1, h2, h3, h4, h5, h6, p, ul {
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
+body {
+	background-color: #cccccc;
+	font: 14px/1.5 Helvetica, Arial,'Liberation Sans', FreeSans, sans-serif;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+h4 {
+	font-size: 1.4em;
+}
+
+h5 {
+	font-size: 1.2em;
+}
+
+h6 {
+	font-size: 1.0em;
+}
+
+ul {
+	margin-left: 20px;
+}
+
+body #content {
+	background-color: white;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 20px;
+	width: 960px;
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+
+	box-shadow: 5px 5px 10px #444444;
+	-moz-box-shadow: 5px 5px 10px #444444;
+	-webkit-box-shadow: 5px 5px 10px #444444;
+}
+
+.section {
+	border-bottom: 1px #cccccc solid;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+}
+
+.section:last-child {
+	border-bottom: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+body #content #full-name {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+body #content #contact-info * {
+	margin: 0;
+	padding: 0;
+}
+
+/* TODO: explore why 33% + 34% + 33% causes overflow to next line */
+body #content #contact-info li {
+	display: inline-block;
+	text-align: center;
+	width: 33%;
+}
+
+#skills ul.name-value-pair {
+	display: table;
+}
+
+#skills ul.name-value-pair > li {
+	display: table-row;
+}
+
+#skills ul.name-value-pair > li .name {
+	display: table-cell;
+	font-weight: bold;
+	padding-right: 20px;
+}
+
+#skills ul.name-value-pair > li .value {
+	display: table-cell;
+}
+
+ul.chronological-events {
+	display: table;
+}
+
+ul.chronological-events > li {
+	display: table-row;
+}
+
+ul.chronological-events > li .date {
+	color: gray;
+	display: table-cell;
+	font-weight: bold;
+	padding-right: 20px;
+}
+
+ul.chronological-events > li .details {
+	display: table-cell;
+}
+
+ul.chronological-events > li .details .summary {
+	font-weight: bold;
+}
+
+ul.chronological-events > li .details .context:before {
+	content: " - ";
+	font-weight: bold;
+}
+
+ul.chronological-events > li .details .context {
+	font-weight: bold;
+}
+
+ul.chronological-events p.description {
+	margin-left: 10px;
+}
+
+ul.chronological-events ul.description {
+	list-style-type: circle;
+}
