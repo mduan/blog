@@ -12,12 +12,18 @@
 
 body #content #full-name {
 	display: inline-block;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+	padding-right: 0;
 	text-align: center;
-	width: 100%;
 }
 
 body #content #contact-info ul {
 	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 body #content #contact-info li {

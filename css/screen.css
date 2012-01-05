@@ -32,7 +32,7 @@ body {
 	font: 14px/1.5 Helvetica, Arial,'Liberation Sans', FreeSans, sans-serif;
 }
 
-body #content {
+#content {
 	background-color: white;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -46,4 +46,15 @@ body #content {
 	box-shadow: 5px 5px 10px #444444;
 	-moz-box-shadow: 5px 5px 10px #444444;
 	-webkit-box-shadow: 5px 5px 10px #444444;
+}
+
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6,
+#content p,
+#content ul {
+	padding-left: 20px;
 }
