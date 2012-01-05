@@ -1,61 +1,3 @@
-h1, h2, h3, h4, h5, h6, p, ul {
-	margin-bottom: 0.5em;
-	margin-top: 0.5em;
-}
-
-body {
-	background-color: #cccccc;
-	font: 14px/1.5 Helvetica, Arial,'Liberation Sans', FreeSans, sans-serif;
-}
-
-h1 {
-	font-size: 2.5em;
-}
-
-h2 {
-	font-size: 1.8em;
-}
-
-h3 {
-	font-size: 1.6em;
-}
-
-h4 {
-	font-size: 1.4em;
-}
-
-h5 {
-	font-size: 1.2em;
-}
-
-h6 {
-	font-size: 1.0em;
-}
-
-ul {
-	margin-left: 20px;
-}
-
-body #content {
-	background-color: white;
-	margin-bottom: 20px;
-	margin-top: 20px;
-	padding: 20px;
-	width: 960px;
-
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-
-	border-radius: 12px;
-	-moz-border-radius: 12px;
-	-webkit-border-radius: 12px;
-
-	box-shadow: 5px 5px 10px #444444;
-	-moz-box-shadow: 5px 5px 10px #444444;
-	-webkit-box-shadow: 5px 5px 10px #444444;
-}
-
 .section {
 	border-bottom: 1px #cccccc solid;
 	margin-bottom: 1em;
@@ -74,16 +16,12 @@ body #content #full-name {
 	width: 100%;
 }
 
-body #content #contact-info * {
-	margin: 0;
-	padding: 0;
+body #content #contact-info ul {
+	margin-left: 0;
 }
 
-/* TODO: explore why 33% + 34% + 33% causes overflow to next line */
 body #content #contact-info li {
-	display: inline-block;
 	text-align: center;
-	width: 33%;
 }
 
 #skills ul.name-value-pair {
@@ -92,6 +30,8 @@ body #content #contact-info li {
 
 #skills ul.name-value-pair > li {
 	display: table-row;
+	list-style: none;
+	margin-left: 0;
 }
 
 #skills ul.name-value-pair > li .name {
@@ -110,6 +50,8 @@ ul.chronological-events {
 
 ul.chronological-events > li {
 	display: table-row;
+	list-style: none;
+	margin-left: 0;
 }
 
 ul.chronological-events > li .date {
@@ -138,8 +80,4 @@ ul.chronological-events > li .details .context {
 
 ul.chronological-events p.description {
 	margin-left: 10px;
-}
-
-ul.chronological-events ul.description {
-	list-style-type: circle;
 }
