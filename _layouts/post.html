@@ -1,14 +1,14 @@
 ---
 layout: default
+css_paths: ["/css/blog.css"]
+type: post-page
 ---
-<div id="post">
-  <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
-  <div id="date">published {{ page.date | date_to_string }}</div>
-  {{ content }}
-  <hr />
-	<!-- TODO:
-  <div id="disqus">
-    <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/MD/embed.js"></script><noscript><a href="http://MD.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-  </div>
-	-->
+<div class="margins">
+	<div class="section">
+		{% assign article = page %}
+		{% include article.html %}
+	</div>
+	<div class="section">
+		{% include disqus.html %}
+	</div>
 </div>

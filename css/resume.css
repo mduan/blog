@@ -1,16 +1,4 @@
-.section {
-	border-bottom: 1px #cccccc solid;
-	margin-bottom: 1em;
-	padding-bottom: 1em;
-}
-
-.section:last-child {
-	border-bottom: 0;
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
-
-body #content #full-name {
+#content #full-name {
 	display: inline-block;
 	margin-left: 0;
 	margin-right: 0;
@@ -19,71 +7,73 @@ body #content #full-name {
 	text-align: center;
 }
 
-body #content #contact-info ul {
+#content #contact-info ul {
 	margin-left: 0;
 	margin-right: 0;
 	padding-left: 0;
 	padding-right: 0;
 }
 
-body #content #contact-info li {
+#content #contact-info li {
 	text-align: center;
 }
 
-#skills ul.name-value-pair {
+#content #skills ul.name-value-pair {
 	display: table;
+	padding-left: 0;
 }
 
-#skills ul.name-value-pair > li {
+#content #skills ul.name-value-pair > li {
 	display: table-row;
 	list-style: none;
 	margin-left: 0;
 }
 
-#skills ul.name-value-pair > li .name {
+#content #skills ul.name-value-pair > li .name {
 	display: table-cell;
 	font-weight: bold;
 	padding-right: 20px;
 }
 
-#skills ul.name-value-pair > li .value {
+#content #skills ul.name-value-pair > li .value {
 	display: table-cell;
 }
 
-ul.chronological-events {
+#content ul.chronological-events {
 	display: table;
+	padding-left: 0;
 }
 
-ul.chronological-events > li {
+#content ul.chronological-events > li {
 	display: table-row;
 	list-style: none;
 	margin-left: 0;
 }
 
-ul.chronological-events > li .date {
+#content ul.chronological-events > li .date {
 	color: gray;
 	display: table-cell;
 	font-weight: bold;
 	padding-right: 20px;
 }
 
-ul.chronological-events > li .details {
+#content ul.chronological-events > li .details {
 	display: table-cell;
 }
 
-ul.chronological-events > li .details .summary {
+#content ul.chronological-events > li .details .summary {
 	font-weight: bold;
 }
 
-ul.chronological-events > li .details .context:before {
+#content ul.chronological-events > li .details .context:before {
 	content: " - ";
 	font-weight: bold;
 }
 
-ul.chronological-events > li .details .context {
+#content ul.chronological-events > li .details .context {
 	font-weight: bold;
 }
 
-ul.chronological-events p.description {
+#content ul.chronological-events p.description {
 	margin-left: 10px;
 }

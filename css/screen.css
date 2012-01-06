@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 h1 {
-	font-size: 2.5em;
+	font-size: 2.2em;
 }
 
 h2 {
@@ -37,7 +37,7 @@ body {
 	position: relative;
 }
 
-#header #title {
+#header #header-title {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -66,27 +66,6 @@ body {
 	border-right: 0;
 }
 
-#header a {
-	text-decoration: none;
-}
-
-#header a:link,
-#header a:visited {
-	color: #666666;
-}
-
-#header a:hover,
-#header a:focus,
-#header a:active,
-body#about a.about,
-body#home a.home,
-body#blog a.blog,
-body#contact a.contact,
-body#projects a.projects,
-body#resume a.resume {
-	color: white;
-}
-
 #footer ul {
 	list-style: none;
 	overflow: hidden;
@@ -108,20 +87,50 @@ body#resume a.resume {
 	border-right: 0;
 }
 
-#footer a {
+.background a:link,
+.background a:visited {
+	color: #666666;
 	text-decoration: none;
 }
 
-#footer a:link,
-#footer a:visited {
+.background a:hover,
+.background a:focus,
+.background a:active,
+body#about .background a.about,
+body#home .background a.home,
+body#blog .background a.blog,
+body#contact .background a.contact,
+body#projects .background a.projects,
+body#resume .background a.resume {
+	color: white;
+	text-decoration: underline;
+}
+
+.foreground a:link,
+.foreground a:visited {
 	color: #666666;
 }
 
-#footer a:hover,
-#footer a:focus,
-#footer a:active {
-	color: white;
+.foreground a:hover,
+.foreground a:focus,
+.foreground a:active {
+	color: blue;
+	text-decoration: underline;
 }
+
+.foreground a.strong-link:link,
+.foreground a.strong-link:visited {
+	color: black;
+	text-decoration: none;
+}
+
+.foreground a.strong-link:hover,
+.foreground a.strong-link:focus,
+.foreground a.strong-link:active {
+	color: blue;
+	text-decoration: underline;
+}
+
 
 #content {
 	background: white;
@@ -139,13 +148,22 @@ body#resume a.resume {
 	-webkit-box-shadow: 5px 5px 10px #444444;
 }
 
-#content h1,
-#content h2,
-#content h3,
-#content h4,
-#content h5,
-#content h6,
-#content p,
-#content ul {
-	padding-left: 20px;
+#page-title {
+	border-bottom: 1px dotted gray;
+}
+
+.margins {
+	margin: 20px;
+}
+
+.section {
+	border-bottom: 1px #cccccc solid;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+}
+
+.section:last-child {
+	border-bottom: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }

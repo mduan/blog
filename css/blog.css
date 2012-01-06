@@ -1,0 +1,35 @@
+.article-date {
+	color: gray;
+	text-transform: uppercase;
+}
+
+#disqus_thread {
+	width: 500px;
+}
+
+#archive ul {
+	display: table;
+	list-style: none;
+
+}
+
+#archive ul > li {
+	display: table-row;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#archive ul > li .archive-date {
+	display: table-cell;
+	padding-right: 20px;
+}
+
+#archive ul > li .archive-title {
+	display: table-cell;
+}
+
+.archive-date {
+	color: gray;
+}

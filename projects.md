@@ -1,7 +1,7 @@
 ---
 layout: static
-id: projects
 title: projects
+type: projects-page
 ---
 TODO
 More

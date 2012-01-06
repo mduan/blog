@@ -1,0 +1,9 @@
+<article>
+	<div class="article-date">{{ article.date | date_to_string }}</div>
+	{% if index %}
+		<h1><a href="{{ article.url }}" class="strong-link">{{ article.title }}</a></h1>
+	{% else %}
+		<h1>{{ article.title }}</h1>
+	{% endif %}
+	{{ article.content | markdown }}
+</article>
