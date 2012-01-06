@@ -96,12 +96,11 @@ body {
 .background a:hover,
 .background a:focus,
 .background a:active,
-body#about .background a.about,
-body#home .background a.home,
-body#blog .background a.blog,
-body#contact .background a.contact,
-body#projects .background a.projects,
-body#resume .background a.resume {
+body#about-page .background a.about,
+body#blog-page .background a.blog,
+body#contact-page .background a.contact,
+body#projects-page .background a.projects,
+body#resume-page .background a.resume {
 	color: white;
 	text-decoration: underline;
 }
@@ -130,8 +129,6 @@ body#resume .background a.resume {
 	color: blue;
 	text-decoration: underline;
 }
-
-
 #content {
 	background: white;
 	margin-top: 20px;
