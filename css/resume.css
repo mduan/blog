@@ -1,21 +1,24 @@
 #content #full-name {
-	display: inline-block;
-	margin-left: 0;
-	margin-right: 0;
-	padding-left: 0;
-	padding-right: 0;
 	text-align: center;
 }
 
 #content #contact-info ul {
-	margin-left: 0;
-	margin-right: 0;
-	padding-left: 0;
-	padding-right: 0;
+	list-style: none;
 }
 
 #content #contact-info li {
+	float: left;
+	margin-left: 0;
 	text-align: center;
+}
+
+#content #contact-info li.website,
+#content #contact-info li.phone {
+	width: 33%;
+}
+
+#content #contact-info li.email {
+	width: 34%;
 }
 
 #content #skills ul.name-value-pair {
