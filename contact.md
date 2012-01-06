@@ -1,5 +1,6 @@
 ---
 layout: static
+id: contact
 title: contact
 ---
 

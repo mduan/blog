@@ -32,8 +32,99 @@ body {
 	font: 14px/1.5 Helvetica, Arial,'Liberation Sans', FreeSans, sans-serif;
 }
 
+#header {
+	height: 100px;
+	position: relative;
+}
+
+#header #title {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-size: 2.5em;
+	font-weight: bold;
+	text-transform: lowercase;
+}
+
+#header ul#nav {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	float: right;
+	list-style: none;
+	overflow: hidden;
+}
+
+#header ul#nav > li {
+	float: left;
+	border-right: 1px solid #666666;
+	margin: 0;
+	padding: 0px 10px;
+}
+
+#header ul#nav > li:last-child {
+	border-right: 0;
+}
+
+#header a {
+	text-decoration: none;
+}
+
+#header a:link,
+#header a:visited {
+	color: #666666;
+}
+
+#header a:hover,
+#header a:focus,
+#header a:active,
+body#about a.about,
+body#home a.home,
+body#blog a.blog,
+body#contact a.contact,
+body#projects a.projects,
+body#resume a.resume {
+	color: white;
+}
+
+#footer ul {
+	list-style: none;
+	overflow: hidden;
+}
+
+#footer ul > li:first-child {
+	padding-left: 0;
+}
+
+#footer ul > li {
+	float: left;
+	border-right: 1px solid black;
+	margin: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#footer ul > li:last-child {
+	border-right: 0;
+}
+
+#footer a {
+	text-decoration: none;
+}
+
+#footer a:link,
+#footer a:visited {
+	color: #666666;
+}
+
+#footer a:hover,
+#footer a:focus,
+#footer a:active {
+	color: white;
+}
+
 #content {
-	background-color: white;
+	background: white;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	padding-top: 20px;
