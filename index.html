@@ -8,6 +8,7 @@ css_paths: ["/css/blog.css"]
 	{% for article in site.posts limit:1 %}
 		<div class="section">
 			{% assign index = true %}
+			{% assign content = article.content %}
 			{% include article.html %}
 			<a id="more" href="{{ article.url }}#disqus_thread">Comments &raquo;</a>
 		</div>
