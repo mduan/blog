@@ -1,82 +1,61 @@
-#content #full-name {
+h1 {
 	text-align: center;
 }
 
-#content #contact-info ul {
+#contact-info ul {
 	list-style: none;
 }
 
-#content #contact-info li {
+#contact-info li {
 	float: left;
 	margin-left: 0;
 	text-align: center;
 }
 
-#content #contact-info li.website,
-#content #contact-info li.phone {
+#contact-info li.website,
+#contact-info li.phone {
 	width: 33%;
 }
 
-#content #contact-info li.email {
+#contact-info li.email {
 	width: 34%;
 }
 
-#content #skills ul.name-value-pair {
+ul.chronological-events {
 	display: table;
 	padding-left: 0;
 }
 
-#content #skills ul.name-value-pair > li {
+ul.chronological-events > li {
 	display: table-row;
 	list-style: none;
 	margin-left: 0;
 }
 
-#content #skills ul.name-value-pair > li .name {
-	display: table-cell;
-	font-weight: bold;
-	padding-right: 20px;
-}
-
-#content #skills ul.name-value-pair > li .value {
-	display: table-cell;
-}
-
-#content ul.chronological-events {
-	display: table;
-	padding-left: 0;
-}
-
-#content ul.chronological-events > li {
-	display: table-row;
-	list-style: none;
-	margin-left: 0;
-}
-
-#content ul.chronological-events > li .date {
+ul.chronological-events > li .date {
 	color: gray;
 	display: table-cell;
 	font-weight: bold;
 	padding-right: 20px;
 }
 
-#content ul.chronological-events > li .details {
+ul.chronological-events > li .details {
 	display: table-cell;
 }
 
-#content ul.chronological-events > li .details .summary {
+ul.chronological-events > li .details .summary {
 	font-weight: bold;
 }
 
-#content ul.chronological-events > li .details .context:before {
+ul.chronological-events > li .details .context:before {
 	content: " - ";
 	font-weight: bold;
 }
 
-#content ul.chronological-events > li .details .context {
+ul.chronological-events > li .details .context {
 	font-weight: bold;
 }
 
-#content ul.chronological-events p.description {
+ul.chronological-events p.description {
 	margin-left: 10px;
 }

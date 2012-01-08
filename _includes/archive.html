@@ -1,8 +1,10 @@
-<div id="archive">
-	<h1>archive</h1>
-	<ul>
-		{% for post in site.posts %}
-			<li><span class="archive-date">{{ post.date | date_to_string }}</span><a href="{{ post.url }}" class="archive-title">{{ post.title }}</a></li>
-		{% endfor %}
-	</ul>
-</div>
+<section id="archive"> 
+	<h1>Previous Articles</h1>
+	<nav>
+		<ul class="name-value-pairs">
+			{% for post in site.posts %}
+				<li><span class="name date">{{ post.date | date_to_string }}</span><a href="{{ post.url }}" class="value">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</nav>
+</section>

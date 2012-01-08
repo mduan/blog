@@ -1,19 +1,30 @@
 ---
 layout: default
-title: blog
 type: blog-page
 css_paths: ["/css/blog.css"]
+title: Blog
 ---
-<div class="margins">
-	{% for article in site.posts limit:1 %}
-		<div class="section">
-			{% assign index = true %}
-			{% assign content = article.content %}
-			{% include article.html %}
-			<a id="more" href="{{ article.url }}#disqus_thread">Comments &raquo;</a>
-		</div>
-	{% endfor %}
-	<div class="section">
-		{% include archive.html %}
-	</div>
+<div id="archive-toggle-button-wrapper">
+	<a id="archive-toggle-button" class="button" href="#">Archive</a>
 </div>
+{% include archive.html %}
+<script>
+		$('.button').button();
+		$('#archive').css('display', 'none') ;
+		$('#archive-toggle-button').click(function() {
+			$this = $(this);
+			$this.toggleClass('down');
+			if ($this.hasClass('down')) {
+				$('#archive').slideDown('slow');
+			} else {
+				$('#archive').slideUp('slow');
+			}
+		});
+</script>
+<section id="articles">
+{% for article in site.posts limit:1 %}
+	{% assign index = true %}
+	{% assign content = article.content %}
+	{% include article.html %}
+{% endfor %}
+</section>

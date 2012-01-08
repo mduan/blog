@@ -1,35 +1,21 @@
-.article-date {
+.date {
 	color: gray;
+}
+
+article .date {
 	text-transform: uppercase;
 }
 
-#disqus_thread {
-	width: 500px;
+#disqus_thread a em {
+	text-decoration: none;
 }
 
-#archive ul {
-	display: table;
-	list-style: none;
-
+/* TODO: kill hack */
+#archive-toggle-button-wrapper {
+	text-align: right;
 }
 
-#archive ul > li {
-	display: table-row;
-	margin-left: 0;
-	margin-right: 0;
-	padding-left: 0;
-	padding-right: 0;
-}
-
-#archive ul > li .archive-date {
-	display: table-cell;
-	padding-right: 20px;
-}
-
-#archive ul > li .archive-title {
-	display: table-cell;
-}
-
-.archive-date {
-	color: gray;
+/* TODO: fix hack - issue is margin collapse between section and h1 is causing bad animation */
+#archive h1 {
+	margin-top: 0;
 }

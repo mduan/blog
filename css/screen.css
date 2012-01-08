@@ -28,139 +28,165 @@ h6 {
 }
 
 body {
-	background-color: #cccccc;
+	background: #2c2b27;
 	font: 14px/1.5 Helvetica, Arial,'Liberation Sans', FreeSans, sans-serif;
 }
 
-#header {
-	height: 100px;
+header {
+	overflow: hidden;
 	position: relative;
+	height: 50px;
+	margin-top: 10px;
 }
 
-#header #header-title {
+footer {
+	overflow: hidden;
+}
+
+header #logo {
 	position: absolute;
-	bottom: 0;
 	left: 0;
-	font-size: 2.5em;
+	bottom: 0;
+	font-size: 50px;
 	font-weight: bold;
+	line-height: 50px;
 	text-transform: lowercase;
 }
 
-#header ul#nav {
-	position: absolute;
-	bottom: 0;
-	right: 0;
+header nav {
 	float: right;
+	padding-top: 20px;
+}
+
+footer nav {
+	float: right;
+}
+
+nav ul {
 	list-style: none;
 	overflow: hidden;
 }
 
-#header ul#nav > li {
+nav ul > li {
 	float: left;
-	border-right: 1px solid #666666;
+	border-right: 1px solid #5f5e5a;
 	margin: 0;
 	padding: 0px 10px;
 }
 
-#header ul#nav > li:last-child {
+nav ul > li:last-child {
 	border-right: 0;
 }
 
-#footer ul {
-	list-style: none;
-	overflow: hidden;
-}
-
-#footer ul > li:first-child {
-	padding-left: 0;
-}
-
-#footer ul > li {
-	float: left;
-	border-right: 1px solid black;
-	margin: 0;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-#footer ul > li:last-child {
-	border-right: 0;
-}
-
-.background a:link,
-.background a:visited {
-	color: #666666;
+nav a:link,
+nav a:visited {
+	color: #5f5e5a;
 	text-decoration: none;
 }
 
-.background a:hover,
-.background a:focus,
-.background a:active,
-body#about-page .background a.about,
-body#blog-page .background a.blog,
-body#contact-page .background a.contact,
-body#projects-page .background a.projects,
-body#resume-page .background a.resume {
-	color: white;
-	text-decoration: underline;
-}
-
-.foreground a:link,
-.foreground a:visited {
-	color: #666666;
-}
-
-.foreground a:hover,
-.foreground a:focus,
-.foreground a:active {
-	color: blue;
-	text-decoration: underline;
-}
-
-.foreground a.strong-link:link,
-.foreground a.strong-link:visited {
-	color: black;
+nav a:hover,
+nav a:focus,
+nav a:active,
+#blog-page a.blog,
+#projects-page a.projects,
+#resume-page a.resume {
+	color: #f49935;
 	text-decoration: none;
 }
 
-.foreground a.strong-link:hover,
-.foreground a.strong-link:focus,
-.foreground a.strong-link:active {
-	color: blue;
-	text-decoration: underline;
-}
-#content {
-	background: white;
+#content-wrapper {
+	background: #f4f4f4;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 
-	border-radius: 12px;
-	-moz-border-radius: 12px;
-	-webkit-border-radius: 12px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 
-	box-shadow: 5px 5px 10px #444444;
-	-moz-box-shadow: 5px 5px 10px #444444;
-	-webkit-box-shadow: 5px 5px 10px #444444;
+	/*
+	box-shadow: 0 0 3px 3px black;
+	-moz-box-shadow: 0 0 3px 3px black;
+	-webkit-box-shadow: 0 0 3px 3px black;
+	*/
 }
 
-#page-title {
-	border-bottom: 1px dotted gray;
+#content-wrapper a:link,
+#content-wrapper a:visited {
+	color: #2382c5;
+	text-decoration: none;
+	padding: 0;
+	border-bottom: 1px dotted #2382c5;
 }
 
-.margins {
-	margin: 20px;
+#content-wrapper a:hover,
+#content-wrapper a:focus,
+#content-wrapper a:active,
+#content-wrapper a.button.down {
+	color: #2382c5;
+	text-decoration: none;
+	padding: 0;
+	border-bottom: 1px solid #2382c5;
+	background: #d9efff;
 }
 
-.section {
+section {
+	padding-bottom: 20px;
 	border-bottom: 1px #cccccc solid;
-	margin-bottom: 30px;
-	padding-bottom: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
-.section:last-child {
+section:last-child {
 	border-bottom: 0;
 	margin-bottom: 0;
 	padding-bottom: 0;
+}
+
+ul.name-value-pairs {
+	display: table;
+	padding-left: 0;
+}
+
+ul.name-value-pairs > li {
+	display: table-row;
+	list-style: none;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+ul.name-value-pairs > li .name {
+	display: table-cell;
+	padding-right: 20px;
+}
+
+ul.name-value-pairs > li .value {
+	display: table-cell;
+}
+
+aside .sidebar-title {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.grid-wrapper {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.grid-wrapper.border-right-lside {
+	border-left: 1px solid #cccccc;
+}
+
+.grid-wrapper.border-right-rside {
+	padding-left: 0;
+}
+
+.grid-wrapper.border-left-lside {
+	padding-right: 0;
+}
+
+.grid-wrapper.border-left-rside {
+	border-left: 1px solid #cccccc;
 }

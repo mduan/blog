@@ -3,12 +3,10 @@ layout: default
 css_paths: ["/css/blog.css"]
 type: post-page
 ---
-<div class="margins">
-	<div class="section">
-		{% assign article = page %}
-		{% include article.html %}
-	</div>
-	<div class="section">
+<section>
+	{% assign article = page %}
+	{% include article.html %}
+	<section>
 		{% include disqus.html %}
-	</div>
-</div>
+	</section>
+</section>
