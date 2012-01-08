@@ -19,3 +19,13 @@ article .date {
 #archive h1 {
 	margin-top: 0;
 }
+
+#blog {
+  float: left;
+  clear: right;
+  width: 100%;
+}
+
+#archive-toggle-button {
+  float: right;
+}

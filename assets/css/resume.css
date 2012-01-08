@@ -1,9 +1,15 @@
+#resume {
+  float: left;
+  clear: right;
+}
+
 h1 {
 	text-align: center;
 }
 
 #contact-info ul {
 	list-style: none;
+  overflow: hidden;
 }
 
 #contact-info li {
