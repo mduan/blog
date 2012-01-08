@@ -7,6 +7,7 @@ title: Blog
 <button id="archive-toggle-button">Archive</button>
 <div id="blog">
 	{% include archive.html %}
+	{% include disqus_js.html %} <!-- for fetching comment count -->
 	<section id="articles">
 	{% for article in site.posts limit:1 %}
 		{% assign index = true %}
