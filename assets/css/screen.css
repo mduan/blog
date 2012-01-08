@@ -45,7 +45,7 @@ footer {
 }
 
 header {
-  height: 50px;
+  height: 100px;
 }
 
 #content-wrapper {
@@ -56,31 +56,30 @@ header {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-
-  /*
-  box-shadow: 0 0 3px 3px black;
-  -moz-box-shadow: 0 0 3px 3px black;
-  -webkit-box-shadow: 0 0 3px 3px black;
-  */
 }
 
 header #logo {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 100px;
+  text-transform: lowercase;
+
+  display: block;
 	position: absolute;
-	left: 0;
-	bottom: 0;
-	font-size: 50px;
-	font-weight: bold;
-	line-height: 50px;
-	text-transform: lowercase;
+  vertical-align: bottom;
+  left: 0;
+  bottom: 0;
 }
 
 header nav {
-	float: right;
-	padding-top: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 footer nav {
-	float: right;
+  /* TODO: figure out why position:absolute causes nav not to show */
+  float: right;
 }
 
 nav ul {
@@ -95,22 +94,24 @@ nav ul > li {
 	padding: 0px 10px;
 }
 
+nav ul > li:first-child {
+	padding-left: 0;
+}
+
 nav ul > li:last-child {
+	padding-right: 0;
 	border-right: 0;
 }
 
-nav a:link,
-nav a:visited {
+header a:link, header a:visited,
+footer a:link, footer a:visited {
 	color: #5f5e5a;
 	text-decoration: none;
 }
 
-nav a:hover,
-nav a:focus,
-nav a:active,
-#blog-page a.blog,
-#projects-page a.projects,
-#resume-page a.resume {
+header a:hover, header a:focus, header a:active,
+footer a:hover, footer a:focus, footer a:active,
+#blog-page a.blog, #projects-page a.projects, #resume-page a.resume {
 	color: #f49935;
 	text-decoration: none;
 }
@@ -218,6 +219,42 @@ aside#sidebar .sidebar-title {
 
 #sidebar-toggle-button {
 	float: right;
+}
+
+.reflected {
+	position: relative;
+}
+
+.reflected:before,
+.reflected:after {
+	display: block;
+	position: absolute;
+	bottom: -0.8em;
+	left: 0;
+	right: 0;
+}
+
+.reflected:before {
+	opacity: 0.3;
+	/* This is how the text is flipped vertically */
+	-moz-transform: scaleY(-1);
+	-o-transform: scaleY(-1);
+	-webkit-transform: scaleY(-1);
+}
+
+.reflected:after {
+	/* Fading using CSS gradient */
+	/* Don't forget to change the colors to your background color */
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgb(44, 43, 39));
+	background: -webkit-gradient(linear, left top, left center from(rgba(255, 255, 255, 0)), to(rgb(44, 43, 39)));
+  background: #2c2b27;
+	/* the 'filter' property is left out because IE doesn't know ':before' and ':after' psuedo-selectors anyway */
+	content: ' ';
+	height: 1em;
+}
+
+#logo.reflected:before {
+	content: 'mack duan';
 }
 
 /*
