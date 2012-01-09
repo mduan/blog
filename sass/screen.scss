@@ -1,0 +1,232 @@
+// Imports -------------------------------------------------------------------
+
+@import "normalize";
+@import "susy";
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+@import "utilities";
+
+
+// Grid ----------------------------------------------------------------------
+
+// TODO: Use susy for layout
+$show-grid-backgrounds  : true;
+$total-cols             : 12;
+$col-width              : 4em;
+$gutter-width           : 1em;
+$side-gutter-width      : $gutter-width;
+
+
+// Layout -------------------------------------------------------------------
+
+$fg-width: 960px;
+$main-content-width: 610px;
+
+$inline-spacing: 5px; // spacing increment for inline equivalent elements (i.e. buttons)
+$block-spacing: 20px; // spacing increment for block equivalent elements (i.e. sections)
+
+
+// Colors --------------------------------------------------------------------
+
+$bg-bg-color: #2c2b27;
+$bg-link-default-color: #5f5e5a;
+$bg-link-action-color: #f49935;
+
+$fg-bg-color: #f4f4f4;
+$fg-link-default-color: #2382c5;
+$fg-link-action-color: #2382c5;
+$fg-link-action-bg-color: #d9efff;
+$divider-color: #cccccc;
+
+$button-default-text-color: black;
+$button-default-bg-color: #eaeaea;
+$button-action-text-color: #2382c5;
+$button-action-bg-color: #d9efff;
+$button-shadow-color: #333333;
+
+
+// Styles --------------------------------------------------------------------
+
+// Generic position-independent styles ---------------------------------------
+
+body {
+	//@include container;
+	//@include susy-grid-background;
+	background: $bg-bg-color;
+	font: 14px/1.5 Helvetica, Arial,'Liberation Sans', FreeSans, sans-serif;
+}
+
+article, section {
+	padding-bottom: $block-spacing;
+	border-bottom: 1px $divider-color solid;
+	margin-bottom: $block-spacing;
+	&:last-child {
+		border-bottom: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+button {
+	@include border-radius(5px);
+	font-weight: bold;
+	color: $button-default-text-color;
+	background: $button-default-bg-color;
+	text-decoration: none;
+	padding: $inline-spacing;
+	border: 1px outset buttonface;
+	margin: $inline-spacing;
+	&:hover, &:focus, &:active {
+		color: $button-action-text-color;
+		background: $button-action-bg-color;
+	}
+	&.depressed {
+		@include box-shadow(inset 0 0 2px $button-shadow-color);
+		color: $button-action-bg-color;
+		background: $button-action-text-color;
+	}
+}
+
+nav {
+	ul {
+		@include clearfix;
+		list-style: none;
+
+		> li {
+			float: left;
+			border-right: 1px solid #5f5e5a;
+			margin: 0;
+			padding: 0px 10px;
+			&:first-child { padding-left: 0; }
+			&:last-child {
+				padding-right: 0;
+				border-right: 0;
+			}
+		}
+	}
+}
+
+ul.name-value-pairs {
+	display: table;
+	padding-left: 0;
+
+	> li {
+		display: table-row;
+		list-style: none;
+		padding: {left: 0; right: 0}
+
+		.name {
+			display: table-cell;
+			padding-right: 20px;
+		}
+
+		.value { display: table-cell; }
+	}
+}
+
+#blog-page a.blog, #projects-page a.projects, #resume-page a.resume {
+	color: #f49935;
+	text-decoration: none;
+}
+
+
+// Position-dependent styles -------------------------------------------
+
+// Configuration of main layout elements
+@mixin common-layout {
+	@include clearfix;
+	margin: 10px auto;
+	position: relative;
+}
+
+// Styles meant just for background
+@mixin bg {
+	a {
+		color: $bg-link-default-color;
+		text-decoration: none;
+		&:hover, &:focus, &:active { color: $bg-link-action-color; }
+	}
+}
+
+header {
+	@include common-layout;
+	@include bg;
+	height: 100px;
+	width: $fg-width;
+
+	#logo {
+		@include reflect("mack duan");
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		line-height: 100px;
+		vertical-align: bottom;
+		font: { size: 40px; weight: bold; }
+		text-transform: lowercase;
+	}
+
+	nav {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+footer {
+	@include common-layout;
+	@include bg;
+	width: $fg-width;
+
+	/* TODO: figure out why position:absolute causes nav not to show */
+	nav { float: right; }
+}
+
+#content-wrapper {
+	@include common-layout;
+	@include border-radius(5px);
+	background: $fg-bg-color;
+	width: $fg-width - 2 * $block-spacing;
+	padding: $block-spacing;
+
+	a {
+		text-decoration: none;
+		color: $fg-link-default-color;
+		border-bottom: 1px dotted $fg-link-default-color;
+		&:hover, &:focus, &:active {
+			color: $fg-link-action-color;
+			border-bottom: 1px solid $fg-link-default-color;
+			background: $fg-link-action-bg-color;
+		}
+	}
+
+	#main-content {
+		@include clearfix;
+		float: left;
+		padding-right: $block-spacing / 2;
+		width: $main-content-width;
+		position: relative;
+
+		#sidebar-toggle-button { float: right; }
+	}
+
+	aside#sidebar {
+		$border-thickness: 1px;
+		float: right;
+		width: $fg-width - $main-content-width - 3 * $block-spacing; // 2 padding on either side plus middle gutter
+		padding-left: $block-spacing / 2 - $border-thickness;
+		position: relative;
+		border: {
+			left: $border-thickness solid $divider-color;
+			bottom: $border-thickness solid $divider-color;
+		}
+
+		.sidebar-title {
+			font: { weight: bold; size: 1.5em; }
+		}
+
+		#social ul {
+			@include reset-box-horizontal;
+		}
+	}
+}

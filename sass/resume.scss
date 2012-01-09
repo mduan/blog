@@ -1,0 +1,61 @@
+// Imports -------------------------------------------------------------------
+
+@import "compass/utilities/general/clearfix";
+@import "utilities";
+
+
+// Styles --------------------------------------------------------------------
+
+#resume {
+	float: left;
+	clear: right;
+
+	h1 { text-align: center; }
+
+	#contact-info ul {
+		@include clearfix;
+		@include reset-box-horizontal;
+		list-style: none;
+		> li {
+			float: left;
+			margin-left: 0;
+			text-align: center;
+			&.website, &.email, &.phone { width: percentage(1/3); }
+
+		}
+	}
+
+	ul.chronological-events {
+		display: table;
+		padding-left: 0;
+
+		> li {
+			display: table-row;
+			list-style: none;
+			margin-left: 0;
+
+			.date {
+				color: gray;
+				display: table-cell;
+				font-weight: bold;
+				padding-right: 20px;
+			}
+
+			.details {
+				display: table-cell;
+
+				.context {
+					font-weight: bold;
+					&:before {
+						content: " - ";
+						font-weight: bold;
+					}
+				}
+			}
+
+			.summary { font-weight: bold; }
+
+			p.description { margin-left: 10px; }
+		}
+	}
+}

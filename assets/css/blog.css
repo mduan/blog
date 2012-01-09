@@ -1,31 +1,23 @@
-.date {
-	color: gray;
+/* line 6, ../../sass/blog.scss */
+#archive-toggle-button {
+  float: right;
 }
 
-article .date {
-	text-transform: uppercase;
-}
-
-#disqus_thread a em {
-	text-decoration: none;
-}
-
-/* TODO: kill hack */
-#archive-toggle-button-wrapper {
-	text-align: right;
-}
-
-/* TODO: fix hack - issue is margin collapse between section and h1 is causing bad animation */
-#archive h1 {
-	margin-top: 0;
-}
-
+/* line 8, ../../sass/blog.scss */
 #blog {
   float: left;
   clear: right;
   width: 100%;
 }
-
-#archive-toggle-button {
-  float: right;
+/* line 13, ../../sass/blog.scss */
+#blog .date {
+  color: gray;
+}
+/* line 15, ../../sass/blog.scss */
+#blog article .date {
+  text-transform: uppercase;
+}
+/* line 17, ../../sass/blog.scss */
+#blog #disqus_thread a em {
+  text-decoration: none;
 }
