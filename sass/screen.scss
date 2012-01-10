@@ -24,6 +24,7 @@ $main-content-width: 610px;
 
 $inline-spacing: 5px; // spacing increment for inline equivalent elements (i.e. buttons)
 $block-spacing: 20px; // spacing increment for block equivalent elements (i.e. sections)
+$border-thickness: 1px;
 
 
 // Colors --------------------------------------------------------------------
@@ -58,8 +59,9 @@ body {
 
 article, section {
 	padding-bottom: $block-spacing;
-	border-bottom: 1px $divider-color solid;
+	border-bottom: $border-thickness $divider-color solid;
 	margin-bottom: $block-spacing;
+	// TODO: Fix bug where border still shows for section#disqus_thread:last-child
 	&:last-child {
 		border-bottom: 0;
 		margin-bottom: 0;
@@ -74,7 +76,7 @@ button {
 	background: $button-default-bg-color;
 	text-decoration: none;
 	padding: $inline-spacing;
-	border: 1px outset buttonface;
+	border: $border-thickness outset buttonface;
 	margin: $inline-spacing;
 	&:hover, &:focus, &:active {
 		color: $button-action-text-color;
@@ -94,7 +96,7 @@ nav {
 
 		> li {
 			float: left;
-			border-right: 1px solid #5f5e5a;
+			border-right: $border-thickness solid #5f5e5a;
 			margin: 0;
 			padding: 0px 10px;
 			&:first-child { padding-left: 0; }
@@ -192,10 +194,10 @@ footer {
 	a {
 		text-decoration: none;
 		color: $fg-link-default-color;
-		border-bottom: 1px dotted $fg-link-default-color;
+		border-bottom: $border-thickness dotted $fg-link-default-color;
 		&:hover, &:focus, &:active {
 			color: $fg-link-action-color;
-			border-bottom: 1px solid $fg-link-default-color;
+			border-bottom: $border-thickness solid $fg-link-default-color;
 			background: $fg-link-action-bg-color;
 		}
 	}
@@ -221,7 +223,6 @@ footer {
 	}
 
 	aside#sidebar {
-		$border-thickness: 1px;
 		float: right;
 		width: $fg-width - $main-content-width - 3 * $block-spacing; // 2 padding on either side plus middle gutter
 		padding-left: $block-spacing / 2 - $border-thickness;

@@ -6,7 +6,5 @@ type: post-page
 <section id="post">
 	{% assign article = page %}
 	{% include article.html %}
-	<section>
-		{% include disqus.html %}
-	</section>
+	{% include disqus.html %}
 </section>
