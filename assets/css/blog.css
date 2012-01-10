@@ -1,23 +1,15 @@
-/* line 6, ../../sass/blog.scss */
-#archive-toggle-button {
-  float: right;
+/* line 9, ../../sass/blog.scss */
+#blog article .date, #post article .date {
+  color: gray;
+  text-transform: uppercase;
 }
 
-/* line 8, ../../sass/blog.scss */
-#blog {
-  float: left;
-  clear: right;
-  width: 100%;
-}
 /* line 13, ../../sass/blog.scss */
 #blog .date {
   color: gray;
 }
-/* line 15, ../../sass/blog.scss */
-#blog article .date {
-  text-transform: uppercase;
-}
+
 /* line 17, ../../sass/blog.scss */
-#blog #disqus_thread a em {
+#post #disqus_thread a em {
   text-decoration: none;
 }

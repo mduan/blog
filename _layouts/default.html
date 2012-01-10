@@ -16,8 +16,7 @@
 	{% include header.html %}
 	<div id="content-wrapper">
 		<div id="main-content">
-			<!-- TODO: hack to get button to render in a nice looking way. ideally this should be made to display as a vertical tab button to the left of the sidebar -->
-			<button id="sidebar-toggle-button">Collapse</button>
+			{% include toggle_buttons.html %}
 			{{ content }}
 		</div>
 		<aside id="sidebar">

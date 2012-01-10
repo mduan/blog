@@ -207,7 +207,12 @@ footer {
 		width: $main-content-width;
 		position: relative;
 
-		#sidebar-toggle-button { float: right; }
+		#toggle-buttons {
+			display: inline-block;
+			float: right;
+
+			+ * { clear: right; }
+		}
 	}
 
 	aside#sidebar {
