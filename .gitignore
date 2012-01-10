@@ -1,5 +1,6 @@
 *~
 *.swp
+assets/css/
 _site/
 .sass-cache/
 .DS_Store

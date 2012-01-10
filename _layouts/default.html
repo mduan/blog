@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>MD by Mack Duan | {{ page.title }}</title>
+	<title>{{ page.title }} | Mack Duan </title>
 	<meta name="author" content="Mack Duan" />
 	<link rel="stylesheet" href="/assets/css/screen.css" type="text/css" media="screen, projection" />
 	{% for css_path in page.css_paths %}
@@ -19,11 +19,7 @@
 			{% include toggle_buttons.html %}
 			{{ content }}
 		</div>
-		<aside id="sidebar">
-			{% include about.html %}
-			{% include contact.html %}
-			{% include social.html %}
-		</aside>
+		{% include sidebar.html %}
 	</div>
 	{% include footer.html %}
 	{% include google_analytics.html %}

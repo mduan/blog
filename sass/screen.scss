@@ -1,10 +1,10 @@
 // Imports -------------------------------------------------------------------
 
-@import "normalize";
+@import "partials/normalize";
+@import "partials/utilities";
 @import "susy";
 @import "compass/css3";
 @import "compass/utilities/general/clearfix";
-@import "utilities";
 
 
 // Grid ----------------------------------------------------------------------
@@ -207,11 +207,16 @@ footer {
 		width: $main-content-width;
 		position: relative;
 
-		#toggle-buttons {
-			display: inline-block;
-			float: right;
+		// The need for the wrapper is mainly a hack to prevent oversliding upwards when
+		// undepressing the archive button
+		#toggle-buttons-wrapper {
+			@include clearfix;
+			width: 100%;
 
-			+ * { clear: right; }
+			#toggle-buttons {
+				display: inline-block;
+				float: right;
+			}
 		}
 	}
 

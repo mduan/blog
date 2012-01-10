@@ -9,7 +9,7 @@ Finally I've got around to setting up a personal blog. In this first post, I'll 
 Some of the factors that inspired me set up a blog include:
 * Playground for doing some front-end development
 * Put some use to the virtual private server and domain I'd been paying for awhile without using
-* Everyone else in my class is doing it
+* Many other people I know are doing it
 
 ## Technologies Used
 
