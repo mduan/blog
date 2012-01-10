@@ -1,18 +1,19 @@
 // Imports -------------------------------------------------------------------
 
+@import "compass/utilities/general/clearfix";
+
 
 // Styles --------------------------------------------------------------------
 
-#archive-toggle-button { float: right; }
+#blog, #post {
+	article .date { color: gray; text-transform: uppercase; }
+}
 
 #blog {
-	float: left;
-	clear: right;
-	width: 100%;
-
 	.date { color: gray; }
+}
 
-	article .date { text-transform: uppercase; }
-
+#post {
 	#disqus_thread a em { text-decoration: none; }
 }
+

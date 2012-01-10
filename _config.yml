@@ -1,7 +1,9 @@
 permalink: /blog/:year/:month/:day/:title
+pygments: true
 exclude:
 - sass/
 - README.md
 - CC-LICENSE
 - MIT-LICENSE
+- .gitignore
 - config.rb

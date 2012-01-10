@@ -658,10 +658,15 @@ footer nav {
   position: relative;
 }
 /* line 210, ../../sass/screen.scss */
-#content-wrapper #main-content #sidebar-toggle-button {
+#content-wrapper #main-content #toggle-buttons {
+  display: inline-block;
   float: right;
 }
-/* line 213, ../../sass/screen.scss */
+/* line 214, ../../sass/screen.scss */
+#content-wrapper #main-content #toggle-buttons + * {
+  clear: right;
+}
+/* line 218, ../../sass/screen.scss */
 #content-wrapper aside#sidebar {
   float: right;
   width: 290px;
@@ -670,12 +675,12 @@ footer nav {
   border-left: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
 }
-/* line 224, ../../sass/screen.scss */
+/* line 229, ../../sass/screen.scss */
 #content-wrapper aside#sidebar .sidebar-title {
   font-weight: bold;
   font-size: 1.5em;
 }
-/* line 228, ../../sass/screen.scss */
+/* line 233, ../../sass/screen.scss */
 #content-wrapper aside#sidebar #social ul {
   padding-left: 0;
   padding-right: 0;
