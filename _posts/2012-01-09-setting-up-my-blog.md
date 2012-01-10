@@ -67,6 +67,7 @@ A list of things I want to work on or fix. Mostly meant for personal reference.
 * Print support for resume page and pdf version
 * Fix CSS stylesheet inheritance issue
 * Create google-compatible XML sitemap
+* Set up auto spellcheck
 * Integrate [HTML5 Boileplate](http://html5boilerplate.com "Website for HTML5 Boilerplate")
 * Better support for mobile using a CSS framework such as [320 and up](http://stuffandnonsense.co.uk/projects/320andup "Website for 320 and up")
 * Integrate [CoffeeScript](http://coffeescript.org "Website for CoffeeScript") for writing cleaner JavaScript
