@@ -5,5 +5,4 @@ exclude:
 - README.md
 - CC-LICENSE
 - MIT-LICENSE
-- .gitignore
 - config.rb
