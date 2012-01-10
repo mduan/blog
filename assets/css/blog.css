@@ -1,0 +1,15 @@
+/* line 9, ../../sass/blog.scss */
+#blog article .date, #post article .date {
+  color: gray;
+  text-transform: uppercase;
+}
+
+/* line 13, ../../sass/blog.scss */
+#blog .date {
+  color: gray;
+}
+
+/* line 17, ../../sass/blog.scss */
+#post #disqus_thread a em {
+  text-decoration: none;
+}
