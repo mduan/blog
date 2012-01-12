@@ -25,7 +25,7 @@ I was content with building a simple blogging engine on top of Flask. Unfortunat
 
 ### [Sass](http://sass-lang.com "Website for Sass")
 
-Sass lets you write dynamic stylesheets that is compiled into CSS before deployment. Some of the features it provides include variables, mixins, programming constructs (eg. conditionals, loops) and nesting of rules.
+Sass lets you write dynamic stylesheets that are compiled into CSS before deployment. Some of the features it provides include variables, mixins, programming constructs (eg. conditionals, loops) and nesting of rules.
 
 ### [Compass](http://compass-style.org "Website for Compass")
 
